@@ -1,3 +1,5 @@
+/** @format */
+
 const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
@@ -25,3 +27,5 @@ const checkAdminRole = (req, res, next) => {
   console.log("User is an admin");
   next();
 };
+
+module.exports = { verifyToken, checkAdminRole };

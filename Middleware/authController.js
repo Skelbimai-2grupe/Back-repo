@@ -1,17 +1,19 @@
+/** @format */
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// const User = require("user modelio vieta")
+const User = require("../models/User"); // Ensure the correct path to your User model
 
 const registerUser = async (req, res) => {
   try {
-    const { username, password, role } = req.body;
+    const { username, password } = req.body;
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const newUser = new UserActivation({
+    const newUser = new User({
       username,
       password: hashedPassword,
-      role,
+      role: "user", // Default role is 'user'
     });
 
     await newUser.save();
@@ -43,7 +45,7 @@ const loginUser = async (req, res) => {
         role: user.role,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" },
+      { expiresIn: "1h" }
     );
     res.json({ user, token });
   } catch (error) {
