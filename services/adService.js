@@ -1,3 +1,5 @@
+/** @format */
+
 const Ad = require("../models/adModel");
 const Category = require("../models/categoryModel");
 const User = require("../models/userModel");
@@ -30,6 +32,7 @@ class AdService {
     const ads = await Ad.find();
     return ads;
   }
+
   async getAdById(adId) {
     const ad = await Ad.findById(adId);
 
@@ -82,6 +85,16 @@ class AdService {
     });
 
     return result;
+  }
+
+  async blockAd(adId) {
+    const ad = await Ad.findById(adId);
+    if (!ad) {
+      throw new Error("Ad not found");
+    }
+    ad.isBlocked = true;
+    await ad.save();
+    return ad;
   }
 }
 

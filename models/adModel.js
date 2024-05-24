@@ -1,3 +1,5 @@
+/** @format */
+
 const mongoose = require("mongoose");
 
 const adSchema = new mongoose.Schema({
@@ -35,6 +37,10 @@ const adSchema = new mongoose.Schema({
       ref: "Comment",
     },
   ],
+  isBlocked: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model("Ad", adSchema);

@@ -80,11 +80,7 @@ const blockAd = asyncHandler(async (req, res) => {
   const adId = req.params.id;
 
   try {
-    const ad = await adService.getAdById(adId);
-    if (!ad) return res.status(404).json({ message: "Ad not found" });
-
-    ad.isBlocked = true;
-    await ad.save();
+    const ad = await adService.blockAd(adId);
     res.status(200).json({ message: "Ad blocked successfully", ad });
   } catch (error) {
     res.status(400).json({ error: "Ad blocking failed: " + error.message });

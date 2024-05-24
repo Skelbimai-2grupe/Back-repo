@@ -62,7 +62,7 @@ class UserService {
 
   // to do logout
   async logoutUser(userId) {
-    return { message: "Logged out sucessfully" };
+    return { message: "Logged out successfully" };
   }
 
   async getUser(userId) {
@@ -76,6 +76,16 @@ class UserService {
       email: user.email,
       role: user.role,
     };
+  }
+
+  async blockUser(userId) {
+    const user = await User.findById(userId);
+    if (!user) {
+      throw new Error("User not found");
+    }
+    user.isBlocked = true;
+    await user.save();
+    return user;
   }
 }
 
