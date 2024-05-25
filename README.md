@@ -1,243 +1,6 @@
+# OUR DISCORD: https://discord.gg/Qb8gAFem
 
-# Skelbimai Web App
-
-## Overview
-
-The Skelbimai App is a platform for posting and managing advertisements. Users can create, view, and like ads. Skelbimai app built using Node.js and Express. It provides a RESTful API for the frontend to interact with.
-
-## Features
-
-- User authentication and authorization
-- Create, read, update, and delete advertisements
-- View all advertisements
-- Like and unlike advertisements
-- View user's own advertisements
-- Mark advertisements as favorites
-
-## Tech Stack
-
-- **Node.js**: JavaScript runtime environment
-- **Express**: Web framework for Node.js
-- **MongoDB**: NoSQL database
-- **Mongoose**: ODM for MongoDB
-- **JWT**: JSON Web Tokens for authentication
-- **dotenv**: Environment variable management
-
-## Start backend server
-
-
-1. **Install dependencies:**
-
-   npm install
-  
-  
-2. **Run the server:**
-    
-    npm run server
-
-    The server will start on the port specified in the `.env` file (default is 5000).
-
-
- ## Contributors
-- KESTUTIS GIRDZIUNAS
-- KAROLIS LAPIENIS
-- LAURYNAS JOKŠAS
-- LAURYNAS ŠAPNAGIS
-- TAUTVYDAS KREIVYS
-
-## Issues and Bug Reporting
-
-   If you encounter any issues or bugs, please report to our gmail:  skelbimai.reports@gmail.com
-
-   ## Additional Resources
-
-
-
-## POSTMAN TESTING CRUD GUIDE :
-
-1. # ADS
-
-# CREATE AD
-
-Endpoint: http://localhost:5000/ads  
-Method: POST  
-Description: Creates a new advertisement  
-Request Body:
-
-{
-  "title": "Example Ad",
-  "description": "This is an example ad",
-  "price": 100,
-  "category": "Example Category"
-}
-
-
-# GET ALL ADS
-
-Endpoint: http://localhost:5000/ads  
-Method: GET  
-Description: Retrieves all advertisements
-
-# UPDATE AD BY ID
-
-Endpoint: http://localhost:5000/ads/{id}  
-Method: PUT  
-Description: Updates an existing advertisement  
-Request Body:
-
-{
-  "title": "Updated Ad",
-  "description": "This is an updated ad",
-  "price": 150,
-  "category": "Updated Category"
-}
-
-# DELETE AD BY ID
-
-Endpoint: http://localhost:5000/ads/{id}  
-Method: DELETE  
-Description: Deletes an existing advertisement
-
-2. # CATEGORIES
-
-# CREATE CATEGORY
-
-Endpoint: http://localhost:5000/categories  
-Method: POST  
-Description: Creates a new category  
-Request Body:
-
-{
-  "name": "Example Category"
-}
-
-
-# GET ALL CATEGORIES
-
-Endpoint: http://localhost:5000/categories  
-Method: GET  
-Description: Retrieves all categories
-
-# UPDATE CATEGORY BY ID
-
-Endpoint: http://localhost:5000/categories/{id}  
-Method: PUT  
-Description: Updates an existing category  
-Request Body:
-
-{
-  "name": "Updated Category"
-}
-
-# DELETE CATEGORY BY ID
-
-Endpoint: http://localhost:5000/categories/{id}  
-Method: DELETE  
-Description: Deletes an existing category
-
-
-3. # Comments
-
-
-# CREATE COMMENT
-
-Endpoint: http://localhost:5000/comments  
-Method: POST  
-Description: Creates a new comment  
-Request Body:
-
-{
-  "adId": "Ad ID",
-  "text": "This is a comment"
-}
-
-# GET ALL COMMENTS
-
-Endpoint: http://localhost:5000/comments  
-Method: GET  
-Description: Retrieves all comments
-
-# UPDATE COMMENTS BY ID
-
-Endpoint: http://localhost:5000/comments/{id}  
-Method: PUT  
-Description: Updates an existing comment  
-Request Body:
-
-{
-  "text": "Updated comment"
-}
-
-# DELETE COMMENT BY ID
-
-Endpoint: http://localhost:5000/comments/{id}  
-Method: DELETE  
-Description: Deletes an existing comment
-
-4. # LIKES
-
-
-# LIKE AN AD
-
-Endpoint: http://localhost:5000/ads/{id}/like  
-Method: POST  
-Description: Likes an advertisement
-
-# UNLIKE AN AD
-
-Endpoint: http://localhost:5000/ads/{id}/unlike  
-Method: POST  
-Description: Unlikes an advertisement
-
-5.  # USERS
-
-
-# CREATE USER
-
-Endpoint: http://localhost:5000/users  
-Method: POST  
-Description: Creates a new user  
-Request Body:
-
-{
-  "username": "exampleuser",
-  "password": "examplepassword",
-  "email": "example@example.com"
-}
-
-# GET ALL USERS
-
-Endpoint: http://localhost:5000/users  
-Method: GET  
-Description: Retrieves all users
-
-# UPDATE USER BY ID
-
-Endpoint: http://localhost:5000/users/{id}  
-Method: PUT  
-Description: Updates an existing user  
-Request Body:
-
-{
-  "username": "updateduser",
-  "email": "updated@example.com"
-}
-
-# DELETE USER BY ID
-
-Endpoint: http://localhost:5000/users/{id}  
-Method: DELETE  
-Description: Deletes an existing user
-
-This guide should help you get started with launching the project and testing the CRUD operations using Postman.
-
-
-# LOGINS FOR TESTING 
-
-# PAPRASTAS: defaultuser@gmail.com / default123
-# ADMINAS: adminuser@gmail.com / admin123
-
-
+# EXTERNAL LINKS
 
 #### Trello:
 https://trello.com/invite/b/qU8dSP94/ATTIc38c40d6f5672524d3c634d09afa0b2a64A1BE4E/skelbimai-app 
@@ -254,4 +17,258 @@ https://docs.google.com/presentation/d/1Ya6_1yJMuhyOlH1dD8hIWSzIRVfM5SWKwfjXnk8h
 #### Figma:
 https://www.figma.com/design/Z3cjZzQYfKxmZt9Paq2F22/Untitled?node-id=0-1
 
-# Our discord: https://discord.gg/Qb8gAFem
+
+# SKELBIMAI WEB APP
+
+# OVERVIEW
+
+The Skelbimai Web App is a comprehensive platform designed to facilitate the posting and browsing of classified advertisements. The application aims to provide users with an intuitive and user-friendly interface to create, manage, and search for various types of listings, including but not limited to, job postings, real estate, services, and items for sale.
+
+
+# KEY FEATURES
+
+**User Authentication and Profiles**:
+   - Secure user registration and login.
+   - Ability to view and manage user's own listings.
+
+**Listing Management**:
+  - Add images and detailed descriptions to listings.
+  - Create and delete listings.
+  - User can comment on listings.
+  - Users can like listings.
+
+**Categorize**:
+  -  User can choose from a list of categories that definds his listings.
+  
+**Admin funcions**
+  - Admin can add a category, block ad and block user.
+
+
+# TECH STACK
+
+- React
+- MongoDB
+- Node.js
+- Express
+- CORS
+- jsonwebtoken
+
+
+# USAGE AND INSTALLATION
+
+1. Clone the repository:
+- git clone https://github.com/Skelbimai-2grupe/backend.git
+- cd backend
+
+2. Install dependencies:
+- npm install
+
+3. Run the application:
+- npm run server
+
+# POSTMAN CRUD TESTING GUIDE 
+
+# User Routes
+
+1. Register User:
+- Method: POST
+- URL: http://localhost:5000/api/users/register
+- Body (JSON):
+  
+**result**
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+2. Login User:
+- Method: POST
+- URL: http://localhost:5000/api/users/login
+- Body (JSON):
+
+**result**
+{
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+3. Logout User:
+- Method: POST
+- URL: http://localhost:5000/api/users/logout
+- Headers: Authorization: Bearer <your_jwt_token>
+
+
+4. Get User by ID:
+- Method: GET
+- URL: http://localhost:5000/api/users/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+
+
+5. Get All Users:
+- Method: GET
+- URL: http://localhost:5000/api/users/
+- Headers: Authorization: Bearer <your_jwt_token>
+
+
+6. Block User:
+- Method: PATCH
+- URL: http://localhost:5000/api/users/block/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+
+# Ad Routes
+
+1. Create Ad:
+- Method: POST
+- URL: http://localhost:5000/api/ads
+- Headers: Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+
+**result**
+{
+  "title": "Ad Title",
+  "description": "Ad Description",
+  "category": "Category ID",
+  "price": "0"
+  "images": ["image.jpg"]
+}
+
+2. Get Ad by ID:
+- Method: GET
+- URL: http://localhost:5000/api/ads/:id
+
+3. Get All Ads:
+- Method: GET
+- URL: http://localhost:5000/api/ads
+
+4. Update Ad:
+
+Method: PATCH
+- URL: http://localhost:5000/api/ads/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+
+**result**
+{
+  "title": "Updated Ad Title",
+  "description": "Updated Ad Description"
+}
+
+
+5. Delete Ad:
+- Method: DELETE
+- URL: http://localhost:5000/api/ads/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+
+# Category Routes
+
+1. Create Category:
+- Method: POST
+- URL: http://localhost:5000/api/categories
+- Headers:
+- Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+
+**result**
+{
+  "name": "Category Name"
+}
+
+2. Get Category by ID:
+- Method: GET
+- URL: http://localhost:5000/api/categories/:id
+
+3. Get All Categories:
+- Method: GET
+- URL: http://localhost:5000/api/categories
+
+4. Update Category:
+- Method: PATCH
+- URL: http://localhost:5000/api/categories/:id
+- Headers:Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+
+**result**
+{
+  "name": "Updated Category Name"
+}
+
+5. Delete Category:
+- Method: DELETE
+- URL: http://localhost:5000/api/categories/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+
+# Comment Routes
+
+1. Create Comment:
+- Method: POST
+- URL: http://localhost:5000/api/comments
+- Headers: Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+
+**result**
+{
+  "adId": "Ad ID",
+  "text": "Comment Text"
+}
+
+2. Get Comment by ID:
+- Method: GET
+- URL: http://localhost:5000/api/comments/:id
+
+3. Get All Comments for an Ad:
+- Method: GET
+- URL: http://localhost:5000/api/comments/ad/:adId
+
+4. Update Comment:
+- Method: PATCH
+- URL: http://localhost:5000/api/comments/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+  
+**result**
+{
+  "text": "Updated Comment Text"
+}
+
+5. Delete Comment:
+- Method: DELETE
+- URL: http://localhost:5000/api/comments/:id
+- Headers: Authorization: Bearer <your_jwt_token>
+
+# Like Routes
+
+1. Like an Ad:
+- Method: POST
+- URL: http://localhost:5000/api/likes
+- Headers: Authorization: Bearer <your_jwt_token>
+- Body (JSON):
+  
+**result**
+{
+  "adId": "Ad ID"
+}
+
+
+2. Unlike an Ad:
+Method: DELETE
+URL: http://localhost:5000/api/likes/:id
+Headers: Authorization: Bearer <your_jwt_token>
+
+
+# LOGINS FOR TESTING
+
+- Paprastas: defaultuser@gmail.com / default123
+- Adminas: adminuser@gmail.com / admin123
+
+# CONTRIBUTORS 
+
+- KESTUTIS GIRDZIUNAS
+- KAROLIS LAPIENIS
+- LAURYNAS JOKŠAS
+- LAURYNAS ŠAPNAGIS
+- TAUTVYDAS KREIVYS
+
+# ACKNOWLEDGMENTS
+
+- Special thanks to EVELINA MARCINKEVICIENE for inspiration and guidance.
