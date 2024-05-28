@@ -91,6 +91,18 @@ const blockAd = asyncHandler(async (req, res) => {
   }
 });
 
+// search inputui
+const searchAdsByTitle = asyncHandler(async (req, res) => {
+  const { title } = req.query;
+
+  try {
+    const ads = await adService.searchAdsByTitle(title);
+    res.status(200).json({ message: "Ads retrieved successfully", ads });
+  } catch (error) {
+    res.status(400).json({ error: "Ads retrieval failed: " + error.message });
+  }
+});
+
 module.exports = {
   createAd,
   getAllAds,
@@ -99,4 +111,5 @@ module.exports = {
   updateAd,
   deleteAd,
   blockAd,
+  searchAdsByTitle,
 };

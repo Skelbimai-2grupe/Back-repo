@@ -14,6 +14,16 @@ class AdService {
       throw new Error("This category does not exist in the database");
     }
 
+  // search inputui
+    const searchAdsByTitle = async (title) => {
+      try {
+        const ads = await AdModel.find({ title: { $regex: title, $options: 'i' } });
+        return ads;
+      } catch (error) {
+        throw new Error('Error searching ads by title');
+      }
+    };
+
     const ad = await Ad.create({
       image: image,
       price: price,
@@ -86,6 +96,8 @@ class AdService {
 
     return result;
   }
+
+
 }
 
 module.exports = new AdService();

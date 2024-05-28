@@ -27,5 +27,6 @@ router.put("/:id", verifyToken, updateAd);
 router.delete("/:id", verifyToken, deleteAd);
 router.patch("/block/:id", verifyToken, checkAdminRole, blockAd); // New route for blocking ads
 router.get("/user/:id", verifyToken, getAdsByUserId);
+router.get('/ads/search', adController.searchAdsByTitle);
 
 module.exports = router;
